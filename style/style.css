@@ -48,12 +48,16 @@ body{
     margin: 10px;
     background-color: #fafafa;
     padding: 10px;
+    transition: all .5s;
 }
 .lista a{
     color: rgb(82, 80, 80);
     font-size: x-large;
     text-align: center;
     text-decoration: none;
+}
+.lista li a{
+    transition: all .5s;
 }
 .lista li:hover{
     background-color: #f5f5f5;
@@ -62,6 +66,7 @@ body{
 .lista li a:hover{
     color: olive;
     text-decoration: underline;
+    font-size: 1.7rem;
 }
 .mainIndex{
     grid-area: mainIndex;
@@ -91,6 +96,7 @@ body{
     border-top: solid 2px rgb(82, 80, 80);
     font-size: 1.2rem;
     font-family: 'Ledger', serif;
+    background-image: linear-gradient(rgb(237, 233, 221), white, #f5f5f5);
 }
 /*       ----Galería---         */
 .container2{
@@ -225,6 +231,9 @@ body{
     }
     .lista a{
         font-size: 1.2rem;
+    }
+    .lista li a:hover{
+        font-size: 1.3rem;
     }
     .mainIndex img{
         width: 23rem;
