@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../backgrounds/white-waves.png);
+    background-color: #f5f5f5;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*        ----Index----        */
+.container{
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "logoIndex navIndex"
+    "mainIndex mainIndex "
+    "introIndex introIndex"
+    "footerIndex footerIndex"
+    ;
+}
+.logoIndex{
+    grid-area: logoIndex;
+    background-color: white;
+    color: olive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border: solid .5rem white;
+    font-family: 'Ledger', serif;
+}
+.navIndex{
+    grid-area: navIndex;
+    background-color: #fafafa;
+}
+.lista{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .5rem;
+    border: solid .5rem white;
+}
+.lista li{
+    text-align: center;
+    margin: 10px;
+    background-color: #fafafa;
+    padding: 10px;
+}
+.lista a{
+    color: rgb(82, 80, 80);
+    font-size: x-large;
+    text-align: center;
+    text-decoration: none;
+}
+.lista li:hover{
+    background-color: #f5f5f5;
+    border-radius: 15%;
+}
+.lista li a:hover{
+    color: olive;
+    text-decoration: underline;
+}
+.mainIndex{
+    grid-area: mainIndex;
+    display: flex;
+    justify-content: center;
+    border-top: solid 2px rgb(82, 80, 80);
+    border-bottom: solid 2px rgb(82, 80, 80);
+    padding: 1rem;
+}
+.introIndex{
+    grid-area: introIndex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.4rem;
+}
+.footerIndex{
+    grid-area: footerIndex;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem;
+    border-top: solid 2px rgb(82, 80, 80);
+    font-size: 1.2rem;
+    font-family: 'Ledger', serif;
+}
+/*       ----Galería---         */
+.container2{
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+        "logoIndex navIndex"
+        "galeria galeria"
+        "footerIndex footerIndex"
+    ;
+}
+.galeria{
+    grid-area: galeria;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    border-top: solid 2px rgb(82, 80, 80);
+}
+.galeria div img{
+    width: 15rem;
+    border: 1px double #f5f5f5;
+}
+/*       ----Contactanos---         */
+.container3{
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "logoIndex navIndex"
+    "presentacion presentacion"
+    "formulario formulario"
+    "footerIndex footerIndex"
+    ;
+}
+.presentacion{
+    grid-area: presentacion;
+    border-top: solid 2px rgb(82, 80, 80);
+    padding: 1rem;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.formulario{
+    grid-area: formulario;
+    margin: 1rem;
+}
+.formulario fieldset{
+    padding: 1rem;
+    padding-left: 2rem;
+}
+.botones input{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #fafafa;
+    border-style: solid;
+    border-radius: 15%;
+}
+.botones input:hover{
+    background-color: #f5f5f5;
+    color: olive;
+    text-decoration: underline;
+}
+/*       ----Nuestra Historia---        */
+.container4{
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "logoIndex navIndex"
+    "historia historia"
+    "footerIndex footerIndex"
+    ;
+}
+.historia{
+    grid-area: historia;
+    border-top: solid 2px rgb(82, 80, 80);
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+/*       ----Quienes Somos---        */
+.container5{
+    display: grid;
+    grid-template-columns: 1fr, 4fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "logoIndex navIndex"
+    "nosotros nosotros"
+    "footerIndex footerIndex"
+    ;
+}
+.nosotros{
+    grid-area: nosotros;
+    padding: 1rem;
+    border-top: solid 2px rgb(82, 80, 80);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.nosotros figure img{
+    width: 14rem;
+}
+.nosotros p{
+    width: 40%;
+    font-size: 1.3rem;
+    padding-top: 2rem;
+}
+/*       ----MOBILE----         */
+/* Index */
+@media screen and (max-width: 600px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "logoIndex"
+        "navIndex"
+        "mainIndex"
+        "introIndex"
+        "footerIndex"
+        ;
+    }
+    .logoIndex{
+        padding-top: 1rem;
+        font-size: 1.3rem;
+    }
+    .lista li{
+        margin: 1px;
+        padding: 1px;
+    }
+    .lista a{
+        font-size: 1.2rem;
+    }
+    .mainIndex img{
+        width: 23rem;
+    }
+    .introIndex{
+        font-size: 1.1rem;
+    }
+    .footerIndex{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9rem;
+    }
+    /* Galería */
+    .container2{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "logoIndex"
+        "navIndex"
+        "galeria"
+        "footerIndex"
+        ;
+    }
+    .galeria div img{
+        width: 25rem;
+    }
+    /* Quiénes Somos */
+    .container5{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "logoIndex"
+        "navIndex"
+        "nosotros"
+        "footerIndex"
+        ;
+    }
+    .nosotros figure img{
+        padding-top: 2rem;
+        width: 9rem;
+    }
+    .nosotros p{
+        font-size: 1.1rem;
+        width: 100%;
+        padding-right: 1rem;
+    }
+    /* Nuestra Historia */
+    .container4{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "logoIndex"
+        "navIndex"
+        "historia"
+        "footerIndex"
+        ;
+    }
+    .historia p{
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+    /* Contactanos */
+    .container3{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "logoIndex"
+        "navIndex"
+        "presentacion"
+        "formulario"
+        "footerIndex"
+        ;
+    }
+    .presentacion p{
+        font-size: 1.2rem;
+    }
+}
+
+
