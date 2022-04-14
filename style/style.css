@@ -92,7 +92,7 @@ body{
     display: flex;
     justify-content: space-between;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     border-top: solid 2px rgb(82, 80, 80);
     font-size: 1.2rem;
     font-family: 'Ledger', serif;
@@ -236,7 +236,7 @@ body{
         font-size: 1.3rem;
     }
     .mainIndex img{
-        width: 23rem;
+        width: 80vw;
     }
     .introIndex{
         font-size: 1.1rem;
@@ -258,7 +258,7 @@ body{
         ;
     }
     .galeria div img{
-        width: 25rem;
+        width: 80vw;
     }
     /* Quiénes Somos */
     .container5{
